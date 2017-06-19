@@ -10,7 +10,6 @@
   "app": {
     "id": "",
     "apiKey": "",
-    "model": "default",
     "exclude": [
       "+(git|.idea|lib|test|docs|bin|deploy)/**",
       "+(LICENSE|*.md|*.json|.*)",
