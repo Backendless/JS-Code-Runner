@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * @property {String} objectId
@@ -20,7 +20,7 @@ class PetStore {
    * @returns {Promise.<Pet>}
    */
   getAll() {
-    return Pet.find();
+    return Pet.find()
   }
 
   /**
@@ -30,7 +30,7 @@ class PetStore {
    * @returns {Promise.<Pet>}
    */
   create(pet) {
-    return pet.save();
+    return pet.save()
   }
 
   /**
@@ -40,7 +40,7 @@ class PetStore {
    * @returns {Promise.<Pet>}
    */
   save(pet) {
-    return pet.save();
+    return pet.save()
   }
 
   /**
@@ -49,7 +49,7 @@ class PetStore {
    * @returns {Promise.<Pet>}
    */
   getPet() {
-    return Pet.findById(this.request.pathParams.petId);
+    return Pet.findById(this.request.pathParams.petId)
   }
 
   /**
@@ -63,8 +63,8 @@ class PetStore {
    * @returns {Promise.<PetDeleteResponse>}
    */
   deletePet() {
-    return Pet.remove(this.request.pathParams.petId);
+    return Pet.remove(this.request.pathParams.petId)
   }
 }
 
-Backendless.ServerCode.addService(PetStore);
+Backendless.ServerCode.addService(PetStore)

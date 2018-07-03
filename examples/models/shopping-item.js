@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * @property {String} objectId
@@ -10,4 +10,4 @@ class ShoppingItem extends Backendless.ServerCode.PersistenceItem {
 
 }
 
-module.exports = Backendless.ServerCode.addType(ShoppingItem);
+module.exports = Backendless.ServerCode.addType(ShoppingItem)

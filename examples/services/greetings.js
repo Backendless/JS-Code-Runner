@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-const DICT = {};
-DICT['English'] = 'Welcome';
-DICT['German'] = 'Willkommen';
-DICT['Spanish'] = 'Bienvenido';
+const DICT = {}
+DICT['English'] = 'Welcome'
+DICT['German'] = 'Willkommen'
+DICT['Spanish'] = 'Bienvenido'
 
 class GreetingsService {
   /**
@@ -11,11 +11,11 @@ class GreetingsService {
    * @returns {String}
    */
   getGreeting(userName) {
-    return `${DICT[this.config.lang]} ${userName} !`;
+    return `${DICT[this.config.lang]} ${userName} !`
   }
 }
 
-GreetingsService.version = '1.4.3';
+GreetingsService.version = '1.4.3'
 
 Backendless.ServerCode.addService(GreetingsService, [
   {
@@ -27,4 +27,4 @@ Backendless.ServerCode.addService(GreetingsService, [
     options     : ['English', 'German', 'Spanish'],
     hint        : 'Please select a Greetings Language'
   }
-]);
+])

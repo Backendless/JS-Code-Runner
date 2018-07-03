@@ -4,7 +4,12 @@
     "node": true,
     "es6": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
   "rules": {
+
+    "require-await": 2,
 
     // disallow declaration of variables already declared in the outer scope
     "no-shadow": 2,
@@ -15,7 +20,7 @@
     "max-len": ["error", 120],
 
     // require or disallow use of semicolons instead of ASI
-    "semi": [2, "always"],
+    "semi": [2, "never"],
 
     // require the use of === and !== except null comparison
     "eqeqeq": [2, "smart"],

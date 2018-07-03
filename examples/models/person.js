@@ -1,16 +1,16 @@
-'use strict';
+'use strict'
 
 class Person extends Backendless.ServerCode.PersistenceItem {
 
   constructor() {
-    super();
+    super()
 
     /**
      @name Person#name
      @type String
      */
-    this.name = undefined;
+    this.name = undefined
   }
 }
 
-module.exports = Backendless.ServerCode.addType(Person);
+module.exports = Backendless.ServerCode.addType(Person)

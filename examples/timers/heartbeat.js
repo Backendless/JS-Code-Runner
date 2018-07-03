@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 Backendless.ServerCode.addTimer({
 
@@ -10,9 +10,9 @@ Backendless.ServerCode.addTimer({
   },
 
   execute: function() {
-    console.log("I'm alive!");
+    console.log("I'm alive!")
 
-    Backendless.Logging.getLogger('heartbeat').debug("I'm alive!");
+    Backendless.Logging.getLogger('heartbeat').debug("I'm alive!")
   }
 
-});
+})

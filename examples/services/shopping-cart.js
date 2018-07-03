@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
 const Order        = require('../models/order'),
-      ShoppingCart = require('../models/shopping-cart');
+      ShoppingCart = require('../models/shopping-cart')
 
 /**
  * Custom Business logic may include API Services
@@ -70,7 +70,7 @@ class ShoppingCartService {
    * @returns {Promise.<void>}
    */
   addItem(cartName, item) {
-    return this.addItems(cartName, [item]);
+    return this.addItems(cartName, [item])
   }
 
   /**
@@ -81,13 +81,13 @@ class ShoppingCartService {
   addItems(cartName, items) {
     return ShoppingCart.get(cartName).then(cart => {
       if (!cart) {
-        cart = new ShoppingCart({ name: cartName });
+        cart = new ShoppingCart({ name: cartName })
       }
 
-      items.forEach(item => cart.addItem(item));
+      items.forEach(item => cart.addItem(item))
 
-      return cart.save();
-    });
+      return cart.save()
+    })
   }
 
   /**
@@ -96,7 +96,7 @@ class ShoppingCartService {
    * @returns {Promise.<void>}
    */
   deleteItem(cartName, product) {
-    return ShoppingCart.get(cartName, true).then(cart => cart.deleteItem(product).save());
+    return ShoppingCart.get(cartName, true).then(cart => cart.deleteItem(product).save())
   }
 
   /**
@@ -104,7 +104,7 @@ class ShoppingCartService {
    * @returns {Promise.<Array.<ShoppingItem>>}
    */
   getItems(cartName) {
-    return ShoppingCart.get(cartName, true).then(cart => cart.getItems());
+    return ShoppingCart.get(cartName, true).then(cart => cart.getItems())
   }
 
   /**
@@ -114,7 +114,7 @@ class ShoppingCartService {
    * @returns {Promise.<void>}
    */
   setQuantity(cartName, productName, quantity) {
-    return ShoppingCart.get(cartName, true).then(cart => cart.setQuantity(productName, quantity).save());
+    return ShoppingCart.get(cartName, true).then(cart => cart.setQuantity(productName, quantity).save())
   }
 
   /**
@@ -123,12 +123,12 @@ class ShoppingCartService {
    */
   purchase(cartName) {
     return ShoppingCart.get(cartName, true).then(cart => {
-      const order = new Order(cart.getItems());
+      const order = new Order(cart.getItems())
 
       return order.save()
         .then(() => cart.destroy())
-        .then(() => order);
-    });
+        .then(() => order)
+    })
   }
 }
 
@@ -142,9 +142,9 @@ class ShoppingCartService {
  *
  * @type {string}
  */
-ShoppingCartService.version = '1.0.1';
+ShoppingCartService.version = '1.0.1'
 
 /**
  * lets CodeRunner know that ShoppingCartService class is an API Service
  */
-Backendless.ServerCode.addService(ShoppingCartService);
+Backendless.ServerCode.addService(ShoppingCartService)

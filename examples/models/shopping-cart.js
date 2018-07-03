@@ -1,71 +1,71 @@
-'use strict';
+'use strict'
 
-const ShoppingItem = require('./shopping-item');
+const ShoppingItem = require('./shopping-item')
 
 class ShoppingCart {
   constructor(opts) {
-    opts = opts || {};
+    opts = opts || {}
 
-    this.name = opts.name;
-    this.items = opts.items || [];
-    this.___class = ShoppingCart.name;
+    this.name = opts.name
+    this.items = opts.items || []
+    this.___class = ShoppingCart.name
   }
 
   addItem(item) {
-    item.objectId = null;
+    item.objectId = null
 
-    this.items.push(item);
+    this.items.push(item)
   }
 
   deleteItem(product) {
-    const idx = this.items.findIndex(item => item.product === product);
+    const idx = this.items.findIndex(item => item.product === product)
 
     if (idx === -1) {
-      throw new Error(`No ${product} in cart`);
+      throw new Error(`No ${product} in cart`)
     }
 
-    this.items.splice(idx, 1);
+    this.items.splice(idx, 1)
 
-    return this;
+    return this
   }
 
   setQuantity(product, quantity) {
-    const productItem = this.items.find(item => item.product === product);
+    const productItem = this.items.find(item => item.product === product)
 
     if (!productItem) {
-      throw new Error(`No [${product}] in cart`);
+      throw new Error(`No [${product}] in cart`)
     }
 
-    productItem.quantity = quantity;
+    productItem.quantity = quantity
 
-    return this;
+    return this
   }
 
   getItems() {
-    return this.items;
+    return this.items
   }
 
   destroy() {
-    return Backendless.Cache.remove(this.name);
+    return Backendless.Cache.remove(this.name)
   }
 
   save() {
-    return Backendless.Cache.put(this.name, this);
+    return Backendless.Cache.put(this.name, this)
   }
 
   static get(name, mustExist) {
-    Backendless.Cache.setObjectFactory(ShoppingCart.name, ShoppingCart);
+    Backendless.Cache.setObjectFactory(ShoppingCart.name, ShoppingCart)
 
     return Backendless.Cache.get(name).then(cart => {
       if (cart) {
-        cart.items = cart.items.map(item => Object.assign(new ShoppingItem(), item));
+        cart.items = cart.items.map(item => Object.assign(new ShoppingItem(), item))
       } else if (mustExist) {
-        throw new Error(`Shopping cart [${name}] does not exist`);
+        throw new Error(`Shopping cart [${name}] does not exist`)
       }
 
-      return cart;
-    });
+      return cart
+    })
   }
 }
 
-module.exports = ShoppingCart;
+module.exports = ShoppingCart

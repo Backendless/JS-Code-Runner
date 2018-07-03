@@ -1,12 +1,12 @@
-'use strict';
+'use strict'
 
 //you should add 'easysoap' module to your project dependencies as [npm i easysoap --save]
-const easysoap = require('easysoap');
+const easysoap = require('easysoap')
 const soapClient = easysoap.createClient({
   host: 'http://ws.cdyne.com/',
   path: 'ip2geo/ip2geo.asmx',
   wsdl: 'ip2geo/ip2geo.asmx?WSDL'
-});
+})
 
 /**
  * @typedef {Object} ResolveIPRequest
@@ -50,8 +50,8 @@ class Ip2Geo {
         xmlns: 'http://ws.cdyne.com/'
       },
       params: request
-    }).then(callResponse => callResponse.data);
+    }).then(callResponse => callResponse.data)
   }
 }
 
-Backendless.ServerCode.addService(Ip2Geo);
+Backendless.ServerCode.addService(Ip2Geo)

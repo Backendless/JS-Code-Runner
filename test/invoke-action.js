@@ -1,13 +1,13 @@
 /* eslint max-len: ["off"] */
-'use strict';
+'use strict'
 
 const assert   = require('assert'),
       executor = require('../lib/server-code/runners/tasks/executor'),
       invoke   = require('./helpers/invoke-task'),
-      should = require('should');
+      should = require('should')
 
-require('backendless').ServerCode = require('../lib/server-code/api');
-require('mocha');
+require('backendless').ServerCode = require('../lib/server-code/api')
+require('mocha')
 
 const PET_STORE_SERVICE_XML = (
   `<?xml version="1.0" encoding="ISO-8859-1"?>
@@ -40,7 +40,7 @@ const PET_STORE_SERVICE_XML = (
   <runtime generationMode="FULL">
   </runtime>
 </namespaces>`
-);
+)
 
 const SHOPPING_CART_SERVICE_XML = (
   '<?xml version="1.0" encoding="ISO-8859-1"?>\n' +
@@ -73,7 +73,7 @@ const SHOPPING_CART_SERVICE_XML = (
   '  <runtime generationMode="FULL">\n' +
   '  </runtime>\n' +
   '</namespaces>'
-);
+)
 
 /**
  * @param {String} actionType
@@ -87,71 +87,71 @@ function createTask(actionType, path = '') {
     actionType   : actionType,
     applicationId: '',
     relativePath : path
-  };
+  }
 }
 
-const createAnalyseCodeTask = path => createTask('ANALYSE_SERVER_CODE', `test/${path}`);
+const createAnalyseCodeTask = path => createTask('ANALYSE_SERVER_CODE', `test/${path}`)
 
 describe('[invoke-action] task executor', function() {
   describe('on SHUTDOWN action', function() {
     it('should stop the CodeRunner process', function() {
-      const exit = process.exit;
-      let exitCalled = false;
+      const exit = process.exit
+      let exitCalled = false
 
       process.exit = function() {
-        exitCalled = true;
-      };
+        exitCalled = true
+      }
 
       process.exit.restore = function() {
-        process.exit = exit;
-      };
+        process.exit = exit
+      }
 
       return executor.execute(createTask('SHUTDOWN'), { backendless: { repoPath: '' } })
         .then(process.exit.restore, process.exit.restore)
-        .then(() => should.equal(exitCalled, true));
-    });
-  });
+        .then(() => should.equal(exitCalled, true))
+    })
+  })
 
   describe('on ANALYSE_CODE action', function() {
     it('should parse found services', function() {
       return invoke(createAnalyseCodeTask('fixtures/query-params'))
         .then(res => {
-          assert.equal(res.exception, null);
+          assert.equal(res.exception, null)
 
-          const services = res.arguments.services;
-          assert.equal(services.length, 1);
+          const services = res.arguments.services
+          assert.equal(services.length, 1)
 
-          assert.equal(services.length, 1);
-          assert.equal(services[0].name, 'ShoppingCartService');
-          assert.equal(services[0].description, 'ShoppingCartService');
-          assert.equal(services[0].version, '1.0.0');
-          assert.equal(services[0].xml, SHOPPING_CART_SERVICE_XML);
-        });
-    });
+          assert.equal(services.length, 1)
+          assert.equal(services[0].name, 'ShoppingCartService')
+          assert.equal(services[0].description, 'ShoppingCartService')
+          assert.equal(services[0].version, '1.0.0')
+          assert.equal(services[0].xml, SHOPPING_CART_SERVICE_XML)
+        })
+    })
 
     it('should handle no services', function() {
       return invoke(createAnalyseCodeTask('dummy-folder'))
         .then(res => {
-          assert.equal(res.exception, null);
-          assert.deepEqual(res.arguments.services, []);
-        });
-    });
+          assert.equal(res.exception, null)
+          assert.deepEqual(res.arguments.services, [])
+        })
+    })
 
     it('should handle service methods with explicit route', function() {
       return invoke(createAnalyseCodeTask('fixtures/path-params'))
         .then(res => {
-          assert.equal(res.exception, null);
+          assert.equal(res.exception, null)
 
-          const services = res.arguments.services;
+          const services = res.arguments.services
 
-          assert.equal(services.length, 1);
-          assert.equal(services[0].name, 'PetStore');
-          assert.equal(services[0].description, 'Simple Pet Store demonstrating explicit http routes for service methods');
-          assert.equal(services[0].version, '1.0.0');
-          assert.equal(services[0].config.length, 0);
-          assert.equal(services[0].xml, PET_STORE_SERVICE_XML);
-        });
-    });
-  });
+          assert.equal(services.length, 1)
+          assert.equal(services[0].name, 'PetStore')
+          assert.equal(services[0].description, 'Simple Pet Store demonstrating explicit http routes for service methods')
+          assert.equal(services[0].version, '1.0.0')
+          assert.equal(services[0].config.length, 0)
+          assert.equal(services[0].xml, PET_STORE_SERVICE_XML)
+        })
+    })
+  })
 
-});
+})

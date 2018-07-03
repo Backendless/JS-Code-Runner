@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const supertest = require('supertest');
+const supertest = require('supertest')
 
 /**
  * @param {Object} app
@@ -15,12 +15,12 @@ module.exports = function(app) {
    * @returns {Test}
    */
   return function(method, path, body) {
-    const result = supertest(`${app.server}/${app.id}/${app.restKey}`)[method](path);
+    const result = supertest(`${app.server}/${app.id}/${app.restKey}`)[method](path)
     
     if (body) {
-      result.send(body);
+      result.send(body)
     }
     
-    return result;
-  };
-};
+    return result
+  }
+}

@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 const ORDER = {
   name       : 'Order',
@@ -8,7 +8,7 @@ const ORDER = {
     items     : { type: { name: 'Array', elementType: { name: 'ShoppingItem' } } },
     orderPrice: { type: { name: 'Number' } }
   }
-};
+}
 
 const SHOPPING_CART = {
   name       : 'ShoppingCart',
@@ -30,7 +30,7 @@ const SHOPPING_CART = {
       description: undefined
     }
   }
-};
+}
 
 const SHOPPING_CART_SERVICE = {
   name       : 'ShoppingCartService',
@@ -76,7 +76,7 @@ const SHOPPING_CART_SERVICE = {
       returnType : { name: 'Promise', elementType: { name: 'Order' } }
     }
   }
-};
+}
 
 const SHOPPING_ITEM = {
   name       : 'ShoppingItem',
@@ -88,7 +88,7 @@ const SHOPPING_ITEM = {
     product : { type: { name: 'String' } },
     quantity: { type: { name: 'Number' } }
   }
-};
+}
 
 const PET = {
   name       : 'Pet',
@@ -100,7 +100,7 @@ const PET = {
     birthday: { type: { name: 'Number' } },
     parent  : { type: { name: 'Pet' } }
   }
-};
+}
 
 const PET_DELETE_RESPONSE = {
   name       : 'PetDeleteResponse',
@@ -109,7 +109,7 @@ const PET_DELETE_RESPONSE = {
   properties : {
     deletionTime: { type: { name: 'Number' } }
   }
-};
+}
 
 const PET_STORE = {
   name       : 'PetStore',
@@ -170,15 +170,15 @@ const PET_STORE = {
       }
     }
   }
-};
+}
 
-exports.ORDER = ORDER;
-exports.SHOPPING_CART = SHOPPING_CART;
-exports.SHOPPING_CART_SERVICE = SHOPPING_CART_SERVICE;
-exports.SHOPPING_ITEM = SHOPPING_ITEM;
-exports.PET = PET;
-exports.PET_STORE = PET_STORE;
-exports.PET_DELETE_RESPONSE = PET_DELETE_RESPONSE;
+exports.ORDER = ORDER
+exports.SHOPPING_CART = SHOPPING_CART
+exports.SHOPPING_CART_SERVICE = SHOPPING_CART_SERVICE
+exports.SHOPPING_ITEM = SHOPPING_ITEM
+exports.PET = PET
+exports.PET_STORE = PET_STORE
+exports.PET_DELETE_RESPONSE = PET_DELETE_RESPONSE
 
 exports.map = {
   Order              : ORDER,
@@ -188,4 +188,4 @@ exports.map = {
   Pet                : PET,
   PetStore           : PET_STORE,
   PetDeleteResponse  : PET_DELETE_RESPONSE
-};
+}

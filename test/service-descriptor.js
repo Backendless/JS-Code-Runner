@@ -1,12 +1,12 @@
 /*eslint max-len: ["off"]*/
 
-'use strict';
+'use strict'
 
 const assert          = require('assert'),
       definitions     = require('./helpers/definitions').map,
-      buildServiceXml = require('../lib/server-code/model/service-descriptor').buildXML;
+      buildServiceXml = require('../lib/server-code/model/service-descriptor').buildXML
 
-require('mocha');
+require('mocha')
 
 const SHOPPING_CART_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
 <namespaces>
@@ -37,7 +37,7 @@ const SHOPPING_CART_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
   </namespace>
   <runtime generationMode="FULL">
   </runtime>
-</namespaces>`;
+</namespaces>`
 
 const PET_STORE_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
 <namespaces>
@@ -68,18 +68,18 @@ const PET_STORE_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
   </namespace>
   <runtime generationMode="FULL">
   </runtime>
-</namespaces>`;
+</namespaces>`
 
 describe('service descriptor', function() {
   it('should build valid service XML', function() {
-    const serviceXml = buildServiceXml(['ShoppingCartService'], definitions);
+    const serviceXml = buildServiceXml(['ShoppingCartService'], definitions)
 
-    assert.equal(serviceXml, SHOPPING_CART_SERVICE_XML);
-  });
+    assert.equal(serviceXml, SHOPPING_CART_SERVICE_XML)
+  })
 
   it('should support explicit http methods and routes', function() {
-    const serviceXml = buildServiceXml(['PetStore'], definitions);
+    const serviceXml = buildServiceXml(['PetStore'], definitions)
 
-    assert.equal(serviceXml, PET_STORE_SERVICE_XML);
-  });
-});
+    assert.equal(serviceXml, PET_STORE_SERVICE_XML)
+  })
+})

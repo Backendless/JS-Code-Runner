@@ -1,33 +1,33 @@
-'use strict';
+'use strict'
 
-const ServerCodeModel = require('../../lib/server-code/model');
+const ServerCodeModel = require('../../lib/server-code/model')
 
 class ServerCodeTestModel extends ServerCodeModel {
   constructor() {
-    super();
+    super()
 
-    this.definitions.setExplicitly();
+    this.definitions.setExplicitly()
   }
 
   addService(service, definition) {
-    super.addService(service, {});
+    super.addService(service, {})
 
-    return this.addDefinition(service.name, definition);
+    return this.addDefinition(service.name, definition)
   }
 
   addType(type, definition) {
-    super.addType(type, {});
+    super.addType(type, {})
 
-    return this.addDefinition(type.name, definition);
+    return this.addDefinition(type.name, definition)
   }
 
   addDefinition(name, definition) {
     if (definition) {
-      this.definitions.types[name] = Object.assign({ name: name }, definition);
+      this.definitions.types[name] = Object.assign({ name: name }, definition)
     }
 
-    return this;
+    return this
   }
 }
 
-module.exports = ServerCodeTestModel;
+module.exports = ServerCodeTestModel
