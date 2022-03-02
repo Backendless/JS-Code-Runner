@@ -31,5 +31,10 @@
     "prod": false,
     "cloud": false,
     "threshold": 8192
+  },
+  "rateLimit": {
+    "default": 10,
+    "enabled": false,
+    "overrides": ""
   }
 }
