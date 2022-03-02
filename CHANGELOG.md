@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.4.1 (2022/03/02)
+- add an ability to limit tasks for apps
+
 ### v6.3.10 (2022/01/14)
 - add `compression.threshold` config 
 
