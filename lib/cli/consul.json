@@ -28,5 +28,10 @@
     "prod": "config/servercode/compression/prod",
     "cloud": "config/servercode/compression/cloud",
     "threshold": "config/servercode/compression/threshold"
+  },
+  "rateLimit": {
+    "default": "config/servercode/rateLimit/default",
+    "overrides": "config/servercode/rateLimit/overrides",
+    "enabled": "config/servercode/rateLimit/enabled"
   }
 }
