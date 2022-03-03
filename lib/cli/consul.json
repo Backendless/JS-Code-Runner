@@ -24,10 +24,10 @@
     }
   },
   "compression": {
-    "debug": "config/servercode/compression/debug",
-    "prod": "config/servercode/compression/prod",
-    "cloud": "config/servercode/compression/cloud",
-    "threshold": "config/servercode/compression/threshold"
+    "debug": "config/coderunner/compression/debug",
+    "prod": "config/coderunner/compression/prod",
+    "cloud": "config/coderunner/compression/cloud",
+    "threshold": "config/coderunner/compression/threshold"
   },
   "rateLimit": {
     "default": "config/coderunner/rateLimit/default",
