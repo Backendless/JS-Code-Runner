@@ -30,8 +30,8 @@
     "threshold": "config/servercode/compression/threshold"
   },
   "rateLimit": {
-    "default": "config/servercode/rateLimit/default",
-    "overrides": "config/servercode/rateLimit/overrides",
-    "enabled": "config/servercode/rateLimit/enabled"
+    "default": "config/coderunner/rateLimit/default",
+    "overrides": "config/coderunner/rateLimit/overrides",
+    "enabled": "config/coderunner/rateLimit/enabled"
   }
 }
