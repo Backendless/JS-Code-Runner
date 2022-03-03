@@ -1,5 +1,9 @@
 ## Change Log
 
+### v6.4.2 (2022/03/03)
+- update modules
+- update configs locations for config/coderunner/rateLimit
+
 ### v6.4.1 (2022/03/02)
 - add an ability to limit tasks for apps
 
