@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.4.3 (2022/03/03)
+- update configs locations for config/coderunner/compression
+
 ### v6.4.2 (2022/03/03)
 - update modules
 - update configs locations for config/coderunner/rateLimit
