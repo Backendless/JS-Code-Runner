@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.4.4 (2022/03/10)
+- fix ERR_INVALID_ARG_TYPE error when there is no task result and compression is enabled
+
 ### v6.4.3 (2022/03/03)
 - update configs locations for config/coderunner/compression
 
