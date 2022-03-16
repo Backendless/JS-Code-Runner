@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.4.5 (2022/03/16)
+- fix parsing tasks when compression is enabled
+
 ### v6.4.4 (2022/03/10)
 - fix ERR_INVALID_ARG_TYPE error when there is no task result and compression is enabled
 
