@@ -32,6 +32,9 @@
     "cloud": false,
     "threshold": 8192
   },
+  "loggers": {
+    "maxTextLength": 5000
+  },
   "rateLimit": {
     "default": 10,
     "enabled": false,
