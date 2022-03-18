@@ -37,6 +37,6 @@
     "workers": true
   },
   "sandbox": true,
-  "verbose": true,
+  "verbose": false,
   "debug": true
 }

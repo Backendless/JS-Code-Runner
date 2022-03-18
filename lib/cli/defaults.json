@@ -5,7 +5,8 @@
     "minIdle": 4,
     "heartbeat": {
       "interval": 5,
-      "timeout": 10
+      "timeout": 10,
+      "codeInspectionTimeout": 60
     }
   },
   "deploy": {
