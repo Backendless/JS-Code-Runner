@@ -1,5 +1,11 @@
 ## Change Log
 
+### v6.5.0 (2022/03/18)
+- improve logging by splitting `verbose` options on two `debug` and `verbose`
+- add truncation for long log messages
+- stop processing outdated tasks from the queue
+- add a specific heartbeat timeout option for `ANALYSE_SERVER_CODE` tasks
+
 ### v6.4.5 (2022/03/16)
 - fix parsing tasks when compression is enabled
 
