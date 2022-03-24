@@ -1,5 +1,6 @@
 {
   "backendless": {
+    "forwardableHeaders": "config/coderunner/forwardableHeaders",
     "msgBroker": {
       "host": "config/redis/bl/production/host",
       "port": "config/redis/bl/production/port",

@@ -16,6 +16,7 @@
     "progressInterval": 500
   },
   "backendless": {
+    "forwardableHeaders": "",
     "msgBroker": {
       "host": "cl.backendless.com",
       "port": 6379,

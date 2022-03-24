@@ -13,6 +13,7 @@
     "progressInterval": 500
   },
   "backendless": {
+    "forwardableHeaders": "",
     "msgBroker": {},
     "public": {
       "fileDownloadUrl": "http://localhost:9000",
