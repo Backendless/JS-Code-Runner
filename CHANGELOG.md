@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.5.1 (2022/03/24)
+- attach some HTTP Headers from received tasks to all requests from the coderunner
+
 ### v6.5.0 (2022/03/18)
 - improve logging by splitting `verbose` options on two `debug` and `verbose`
 - add truncation for long log messages
