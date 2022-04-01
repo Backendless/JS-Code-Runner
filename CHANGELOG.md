@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.5.2 (2022/04/01)
+- upgrade "backendless": "^6.3.9"
+
 ### v6.5.1 (2022/03/24)
 - attach some HTTP Headers from received tasks to all requests from the coderunner
 
