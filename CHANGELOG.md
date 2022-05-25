@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.5.3 (2022/04/01)
+- upgrade "backendless": "^6.3.14", fix `Error during logs flushing regeneratorRuntime is not defined`
+
 ### v6.5.2 (2022/04/01)
 - upgrade "backendless": "^6.3.9"
 
