@@ -35,7 +35,8 @@
     "threshold": 8192
   },
   "loggers": {
-    "maxTextLength": 5000
+    "maxTextLength": 5000,
+    "managementServer": false
   },
   "rateLimit": {
     "default": 10,
