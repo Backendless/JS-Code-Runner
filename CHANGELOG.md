@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.5.4 (2022/06/07)
+- add optional logs for the ManagementServer
+
 ### v6.5.3 (2022/04/01)
 - upgrade "backendless": "^6.3.14", fix `Error during logs flushing regeneratorRuntime is not defined`
 
