@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.5.5 (2022/06/10)
+- fix creating a UnitOfWork instance in before/after Transaction event handlers
+
 ### v6.5.4 (2022/06/07)
 - add optional logs for the ManagementServer
 
