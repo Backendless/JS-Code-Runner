@@ -1,5 +1,9 @@
 ## Change Log
 
+### v6.5.6 (2022/09/28)
+- BKNDLSS-29914 fix an issue hanging receiving tasks after parsing tasks fail
+- BKNDLSS-29791 kill cached workers that were finished by timeout
+
 ### v6.5.5 (2022/06/10)
 - fix creating a UnitOfWork instance in before/after Transaction event handlers
 
