@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.5.7 (2022/10/07)
+- upgrade "backendless": "^6.4.0"
+
 ### v6.5.6 (2022/09/28)
 - BKNDLSS-29914 fix an issue hanging receiving tasks after parsing tasks fail
 - BKNDLSS-29791 kill cached workers that were finished by timeout
