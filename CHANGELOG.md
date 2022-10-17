@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.5.8 (2022/10/77)
+- upgrade "backendless": "^6.5.0"
+- 
 ### v6.5.7 (2022/10/07)
 - upgrade "backendless": "^6.4.0"
 
