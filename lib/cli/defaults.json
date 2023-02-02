@@ -3,6 +3,7 @@
     "cache": false,
     "concurrent": 4,
     "minIdle": 4,
+    "cachedIdleTTL": 60,
     "heartbeat": {
       "interval": 5,
       "timeout": 10,
