@@ -1,8 +1,11 @@
 ## Change Log
 
-### v6.5.8 (2022/10/77)
+### v6.6.0 (2023/01/02)
+- BKNDLSS-31251 Dispose idle cached workers
+
+### v6.5.8 (2022/10/17)
 - upgrade "backendless": "^6.5.0"
-- 
+
 ### v6.5.7 (2022/10/07)
 - upgrade "backendless": "^6.4.0"
 
