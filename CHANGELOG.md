@@ -1,5 +1,9 @@
 ## Change Log
 
+### v6.6.1 (2023/02/13)
+- upgrade "backendless": "^6.6.5"
+- BKNDLSS-31341 Error during logs flushing Session timeout
+
 ### v6.6.0 (2023/01/02)
 - BKNDLSS-31251 Dispose idle cached workers
 
