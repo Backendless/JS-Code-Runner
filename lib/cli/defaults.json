@@ -36,6 +36,7 @@
     "threshold": 8192
   },
   "loggers": {
+    "backendless": true,
     "maxTextLength": 5000,
     "managementServer": false
   },
