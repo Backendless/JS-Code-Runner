@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.6.2 (2023/02/16)
+- cleanup env variables for workers
+
 ### v6.6.1 (2023/02/13)
 - upgrade "backendless": "^6.6.5"
 - BKNDLSS-31341 Error during logs flushing Session timeout
