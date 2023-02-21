@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.6.3 (2023/02/21)
+- cleanup logs
+
 ### v6.6.2 (2023/02/16)
 - cleanup env variables for workers
 
