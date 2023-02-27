@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.6.4 (2023/02/27)
+- upgrade "backendless-consul-config-provider": "^2.0.2"
+
 ### v6.6.3 (2023/02/21)
 - cleanup logs
 
