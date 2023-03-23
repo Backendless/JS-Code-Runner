@@ -1,22 +1,6 @@
 {
   "backendless": {
     "forwardableHeaders": "config/coderunner/forwardableHeaders",
-    "msgBroker": {
-      "host": "config/redis/bl/production/host",
-      "port": "config/redis/bl/production/port",
-      "password": "config/redis/bl/production/password",
-      "ssl": "config/redis/bl/production/ssl",
-      "tls": {
-        "rejectUnauthorized": "config/redis/bl/production/tls/rejectUnauthorized",
-        "ca": "config/redis/bl/production/tls/ca",
-        "cert": "config/redis/bl/production/tls/cert",
-        "key": "config/redis/bl/production/tls/key",
-        "caFile": "config/redis/bl/production/tls/caFile",
-        "certFile": "config/redis/bl/production/tls/certFile",
-        "keyFile": "config/redis/bl/production/tls/keyFile",
-        "passphrase": "config/redis/bl/production/tls/passphrase"
-      }
-    },
     "publicHost": "config/server/publicHost",
     "publicPort": "config/server/publicPort",
     "publicProtocol": "config/server/publicProtocol",

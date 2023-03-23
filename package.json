@@ -36,16 +36,11 @@
   ],
   "dependencies": {
     "backendless": "^6.6.5",
-    "backendless-consul-config-provider": "^2.0.2",
+    "backendless-js-services-core": "^0.0.12",
     "commander": "^8.3.0",
     "glob": "^7.2.0",
-    "ioredis": "^4.28.5",
     "jsdoc": "^3.6.10",
-    "jszip": "^3.7.1",
-    "winston": "3.6.0",
-    "winston-daily-rotate-file": "^4.6.1",
-    "winston-logstash": "^0.4.0",
-    "winston-papertrail": "^1.0.5",
+    "jszip": "^3.10.1",
     "xml": "^1.0.1"
   },
   "license": "MIT",

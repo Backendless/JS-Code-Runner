@@ -10,6 +10,13 @@
       "codeInspectionTimeout": 60
     }
   },
+  "redis": {
+    "bl/production": {},
+    "analytics": {}
+  },
+  "serviceStatus": {
+    "enabled": false
+  },
   "deploy": {
     "progressInterval": 500
   },
@@ -36,9 +43,15 @@
     "threshold": 8192
   },
   "loggers": {
+    "console": true,
+    "file": false,
     "backendless": true,
     "maxTextLength": 5000,
-    "managementServer": false
+    "levels": {
+      "default": "info",
+      "Status": "",
+      "Server": ""
+    }
   },
   "rateLimit": {
     "default": 10,

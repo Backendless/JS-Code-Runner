@@ -40,5 +40,5 @@
   },
   "sandbox": true,
   "verbose": false,
-  "debug": true
+  "debug": false
 }
