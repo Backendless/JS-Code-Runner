@@ -1,5 +1,9 @@
 ## Change Log
 
+### v6.7.0 (2023/03/27)
+- integrate with the Status Service 
+- upgrade "backendless": "^6.7.0"
+
 ### v6.6.4 (2023/02/27)
 - upgrade "backendless-consul-config-provider": "^2.0.2"
 
