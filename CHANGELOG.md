@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.7.1 (2023/03/27)
+- fix Consul config
+
 ### v6.7.0 (2023/03/27)
 - integrate with the Status Service 
 - upgrade "backendless": "^6.7.0"
