@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.7.2 (2023/04/17)
+- fix reconnection to the redis
+
 ### v6.7.1 (2023/03/27)
 - fix Consul config
 
