@@ -1,5 +1,7 @@
 {
+  "managementHttpPort": null,
   "workers": {
+    "lowPriorityThreshold": 0.8,
     "cache": false,
     "concurrent": 4,
     "minIdle": 4,
@@ -36,6 +38,7 @@
   },
   "sandbox": false,
   "verbose": false,
+  "debug": false,
   "compression": {
     "debug": false,
     "prod": false,
@@ -43,6 +46,8 @@
     "threshold": 8192
   },
   "loggers": {
+    "workers": true,
+    "managementServer": false,
     "console": true,
     "file": false,
     "backendless": true,

@@ -1,26 +1,8 @@
 {
-  "managementHttpPort": null,
-  "workers": {
-    "cache": {
-      "limit": 20
-    },
-    "concurrent": 4,
-    "minIdle": 2,
-    "heartbeat": {
-      "interval": 5,
-      "timeout": 10
-    },
-    "lowPriorityThreshold": 0.8
-  },
-  "deploy": {
-    "progressInterval": 500
-  },
   "backendless": {
-    "forwardableHeaders": "",
     "msgBroker": {
       "host": "cl.backendless.com",
-      "port": 6379,
-      "max_attempts": 5
+      "port": 6379
     }
   },
   "app": {
@@ -32,13 +14,5 @@
       "node_modules/**",
       "examples/services/wsdl-proxy/**"
     ]
-  },
-  "loggers": {
-    "file": false,
-    "workers": true,
-    "managementServer": false
-  },
-  "sandbox": true,
-  "verbose": false,
-  "debug": false
+  }
 }
