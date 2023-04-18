@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.7.3 (2023/04/18)
+- fix initializing config for the StatusService
+
 ### v6.7.2 (2023/04/17)
 - fix reconnection to the redis
 
