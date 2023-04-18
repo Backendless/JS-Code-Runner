@@ -1,5 +1,8 @@
 ## Change Log
 
+### v6.7.4 (2023/04/18)
+- fix resolving local config in the debug mode
+
 ### v6.7.3 (2023/04/18)
 - fix initializing config for the StatusService
 
