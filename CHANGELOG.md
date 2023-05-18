@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.0.0 (2023/05/18)
+- apply LogLevels in the JSCodeRunner from the context
+
 ### v6.7.4 (2023/04/18)
 - fix resolving local config in the debug mode
 
