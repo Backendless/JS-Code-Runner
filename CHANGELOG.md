@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.0.1 (2023/06/22)
+- upgrade "backendless": "^7.0.2"
+
 ### v7.0.0 (2023/05/18)
 - apply LogLevels in the JSCodeRunner from the context
 
