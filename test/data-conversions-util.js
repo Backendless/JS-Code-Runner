@@ -1,14 +1,12 @@
 'use strict'
 
 const dataConversions = require('../lib/util/data-conversions')
-const { forTest } = require('./helpers/sdk-sandbox')
+require('./helpers/global')
 
 const UTF8 = dataConversions.BufferEncodingStandards.UTF8
 const BYTES = dataConversions.BufferEncodingStandards.BYTES
 
 describe('Data Conversion Util', function() {
-  forTest(this)
-
   describe('convertDataFromTo', function() {
     it('should convert data from bytes to utf8', function() {
       expect(dataConversions.convertDataFromTo([97, 115, 100], BYTES, UTF8)).to.be.equal('asd')
