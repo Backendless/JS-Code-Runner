@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.0.2 (2023/06/28)
+- upgrade "backendless": "^7.0.3"
+
 ### v7.0.1 (2023/06/22)
 - upgrade "backendless": "^7.0.2"
 
