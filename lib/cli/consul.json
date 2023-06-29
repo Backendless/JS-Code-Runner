@@ -18,5 +18,6 @@
     "default": "config/coderunner/rateLimit/default",
     "overrides": "config/coderunner/rateLimit/overrides",
     "enabled": "config/coderunner/rateLimit/enabled"
-  }
+  },
+  "responseSizeLimit": "config/coderunner/responseSizeLimit"
 }
