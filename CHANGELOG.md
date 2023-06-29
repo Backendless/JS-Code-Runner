@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.1.0 (2023/06/29)
+- add new `beforeDownload` event handler for File Service
+
 ### v7.0.2 (2023/06/28)
 - upgrade "backendless": "^7.0.3"
 
