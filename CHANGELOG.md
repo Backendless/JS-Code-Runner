@@ -1,5 +1,9 @@
 ## Change Log
 
+### v7.1.1 (2023/07/17)
+- add an ability to specify `description` for API Service Method arguments
+- fix the `beforeDownload` event handler for File Service
+
 ### v7.1.0 (2023/06/29)
 - add new `beforeDownload` event handler for File Service
 
