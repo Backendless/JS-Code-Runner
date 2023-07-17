@@ -279,7 +279,7 @@ describe('[invoke-handler] task executor', function() {
       }
 
       return invoke(task, modelStub(handler)).then(res => {
-        res.arguments.should.be.empty()
+        res.should.not.have.property('arguments')
         res.exception.exceptionMessage.should.be.eql(error)
       })
     })

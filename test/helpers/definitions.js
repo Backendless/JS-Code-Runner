@@ -131,7 +131,7 @@ const PET_STORE = {
       description: 'Make a new pet',
       returnType : { name: 'Promise', elementType: { name: 'Pet' } },
       params     : [
-        { name: 'pet', type: { name: 'Pet' }, optional: false }
+        { name: 'pet', type: { name: 'Pet' }, optional: false, description: 'The pet JSON you want to post' }
       ],
       tags       : {
         route: 'POST /'
@@ -143,7 +143,7 @@ const PET_STORE = {
       description: 'Save pet',
       returnType : { name: 'Promise', elementType: { name: 'Pet' } },
       params     : [
-        { name: 'pet', type: { name: 'Pet' }, optional: false }
+        { name: 'pet', type: { name: 'Pet' }, optional: false, description: 'The pet JSON you want to save' }
       ],
       tags       : {
         route: 'PUT /'

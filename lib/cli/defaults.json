@@ -62,5 +62,6 @@
     "default": 10,
     "enabled": false,
     "overrides": ""
-  }
+  },
+  "responseSizeLimit": 0
 }

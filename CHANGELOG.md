@@ -1,5 +1,21 @@
 ## Change Log
 
+### v7.1.1 (2023/07/17)
+- add an ability to specify `description` for API Service Method arguments
+- fix the `beforeDownload` event handler for File Service
+
+### v7.1.0 (2023/06/29)
+- add new `beforeDownload` event handler for File Service
+
+### v7.0.2 (2023/06/28)
+- upgrade "backendless": "^7.0.3"
+
+### v7.0.1 (2023/06/22)
+- upgrade "backendless": "^7.0.2"
+
+### v7.0.0 (2023/05/18)
+- apply LogLevels in the JSCodeRunner from the context
+
 ### v6.7.4 (2023/04/18)
 - fix resolving local config in the debug mode
 
