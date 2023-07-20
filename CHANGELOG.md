@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.2.0 (2023/07/20)
+- add support for NodeJS v18.x
+
 ### v7.1.1 (2023/07/17)
 - add an ability to specify `description` for API Service Method arguments
 - fix the `beforeDownload` event handler for File Service
