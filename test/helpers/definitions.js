@@ -43,7 +43,7 @@ const SHOPPING_CART_SERVICE = {
       tags       : {},
       description: undefined,
       params     : [
-        { name: 'cartName', type: { name: 'String' }, optional: false },
+        { name: 'cartName', type: { name: 'String' }, optional: false, description: 'cart name description' },
         { name: 'item', type: { name: 'ShoppingItem' }, optional: false }
       ]
     },

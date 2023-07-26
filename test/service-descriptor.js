@@ -13,7 +13,7 @@ const SHOPPING_CART_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
   <namespace name="services" fullname="services">
     <service name="ShoppingCartService" description="ShoppingCartService" fullname="services.ShoppingCartService" namespace="services">
       <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void">
-        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
+        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true" description="cart name description"/>
         <arg name="item" type="ShoppingItem" nativetype="services.ShoppingItem" fulltype="services.ShoppingItem" javatype="services.ShoppingItem" required="true"/>
       </method>
       <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void">
@@ -46,10 +46,10 @@ const PET_STORE_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
       <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" method="GET" path="/">
       </method>
       <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" method="POST" path="/">
-        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true"/>
+        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to post"/>
       </method>
       <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" method="PUT" path="/">
-        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true"/>
+        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to save"/>
       </method>
       <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" method="GET" path="/{petId}">
       </method>
