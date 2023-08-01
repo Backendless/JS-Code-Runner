@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.3.0 (2023/08/01)
+- add workers for debugging
+
 ### v7.2.0 (2023/07/20)
 - add support for NodeJS v18.x
 
