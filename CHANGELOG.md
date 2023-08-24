@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.3.2 (2023/08/24)
+- fix default logger is not applied to logging config
+
 ### v7.3.1 (2023/08/15)
 - add an ability to TEXT type in Service Config Items
 
