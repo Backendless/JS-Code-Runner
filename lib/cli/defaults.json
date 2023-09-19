@@ -50,7 +50,9 @@
     "workers": true,
     "managementServer": false,
     "console": true,
-    "file": false,
+    "file": {
+      "enabled": false
+    },
     "backendless": true,
     "maxTextLength": 5000,
     "levels": {
