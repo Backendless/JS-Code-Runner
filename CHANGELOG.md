@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.3.3 (2023/09/19)
+- upgrade "backendless-js-services-core": "0.0.23"
+
 ### v7.3.2 (2023/08/24)
 - fix default logger is not applied to logging config
 
