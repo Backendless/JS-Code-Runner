@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.3.4 (2023/09/19)
+- upgrade "backendless-js-services-core": "0.0.24"
+
 ### v7.3.3 (2023/09/19)
 - upgrade "backendless-js-services-core": "0.0.23"
 
