@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.3.5 (2023/09/25)
+- BKNDLSS-33936 Fix services broadcasting for the Status Service
+
 ### v7.3.4 (2023/09/19)
 - upgrade "backendless-js-services-core": "0.0.24"
 
