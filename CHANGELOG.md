@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.3.6 (2023/10/02)
+- install with NodeJS 18.x
+
 ### v7.3.5 (2023/09/25)
 - BKNDLSS-33936 Fix services broadcasting for the Status Service
 
