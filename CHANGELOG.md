@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.3.7 (2023/10/03)
+- upgrade "backendless": "^7.1.0"
+
 ### v7.3.6 (2023/10/02)
 - install with NodeJS 18.x
 
