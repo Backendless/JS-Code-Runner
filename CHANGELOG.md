@@ -1,5 +1,9 @@
 ## Change Log
 
+### v7.4.0 (2023/10/30)
+- upgrade "backendless": "^7.2.0"
+- fix running workers in local env
+
 ### v7.3.7 (2023/10/03)
 - upgrade "backendless": "^7.1.0"
 
