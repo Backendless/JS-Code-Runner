@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.1 (2023/11/02)
+- do not send logs if global logger is OFF
+
 ### v7.4.0 (2023/10/30)
 - upgrade "backendless": "^7.2.0"
 - fix running workers in local env
