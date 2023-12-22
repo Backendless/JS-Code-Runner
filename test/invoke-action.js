@@ -9,22 +9,21 @@ const assert   = require('assert'),
 require('backendless').ServerCode = require('../lib/server-code/api')
 require('mocha')
 
-const PET_STORE_SERVICE_XML = (
-  `<?xml version="1.0" encoding="ISO-8859-1"?>
+const PET_STORE_SERVICE_XML = (`<?xml version="1.0" encoding="ISO-8859-1"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="PetStore" description="Simple Pet Store demonstrating explicit http routes for service methods" fullname="services.PetStore" namespace="services">
-      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" method="GET" path="/">
+      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" operationName="" registerAsAutomationAction="false" method="GET" path="/">
       </method>
-      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" method="POST" path="/">
-        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true"/>
+      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" operationName="" registerAsAutomationAction="false" method="POST" path="/">
+        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to post"/>
       </method>
-      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" method="PUT" path="/">
-        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true"/>
+      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" operationName="" registerAsAutomationAction="false" method="PUT" path="/">
+        <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to save"/>
       </method>
-      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" method="GET" path="/{petId}">
+      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" operationName="" registerAsAutomationAction="false" method="GET" path="/{petId}">
       </method>
-      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" method="DELETE" path="/{petId}">
+      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" operationName="" registerAsAutomationAction="false" method="DELETE" path="/{petId}">
       </method>
     </service>
     <datatype name="Pet" description="Pet" fullname="services.Pet" typeNamespace="services">
@@ -42,37 +41,36 @@ const PET_STORE_SERVICE_XML = (
 </namespaces>`
 )
 
-const SHOPPING_CART_SERVICE_XML = (
-  '<?xml version="1.0" encoding="ISO-8859-1"?>\n' +
-  '<namespaces>\n' +
-  '  <namespace name="services" fullname="services">\n' +
-  '    <service name="ShoppingCartService" description="ShoppingCartService" fullname="services.ShoppingCartService" namespace="services">\n' +
-  '      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void">\n' +
-  '        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>\n' +
-  '        <arg name="item" type="ShoppingItem" nativetype="services.ShoppingItem" fulltype="services.ShoppingItem" javatype="services.ShoppingItem" required="true"/>\n' +
-  '      </method>\n' +
-  '      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void">\n' +
-  '        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>\n' +
-  '        <arg name="items" type="Array" nativetype="List&lt;services.ShoppingItem&gt;" fulltype="Array" javatype="java.util.List&lt;services.ShoppingItem&gt;" elementType="ShoppingItem" required="true"/>\n' +
-  '      </method>\n' +
-  '      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order">\n' +
-  '        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>\n' +
-  '      </method>\n' +
-  '    </service>\n' +
-  '    <datatype name="ShoppingItem" description="ShoppingItem" fullname="services.ShoppingItem" typeNamespace="services">\n' +
-  '      <field name="objectId" type="String" nativetype="String" fulltype="String" javatype="java.lang.String"/>\n' +
-  '      <field name="product" type="String" nativetype="String" fulltype="String" javatype="java.lang.String"/>\n' +
-  '      <field name="price" type="Number" nativetype="float" fulltype="Number" javatype="float"/>\n' +
-  '      <field name="quantity" type="Number" nativetype="float" fulltype="Number" javatype="float"/>\n' +
-  '    </datatype>\n' +
-  '    <datatype name="Order" description="Order" fullname="services.Order" typeNamespace="services">\n' +
-  '      <field name="items" type="Array" nativetype="List&lt;services.ShoppingItem&gt;" fulltype="Array" javatype="java.util.List&lt;services.ShoppingItem&gt;" elementType="ShoppingItem"/>\n' +
-  '      <field name="orderPrice" type="Number" nativetype="float" fulltype="Number" javatype="float"/>\n' +
-  '    </datatype>\n' +
-  '  </namespace>\n' +
-  '  <runtime generationMode="FULL">\n' +
-  '  </runtime>\n' +
-  '</namespaces>'
+const SHOPPING_CART_SERVICE_XML = (`<?xml version="1.0" encoding="ISO-8859-1"?>
+<namespaces>
+  <namespace name="services" fullname="services">
+    <service name="ShoppingCartService" description="ShoppingCartService" fullname="services.ShoppingCartService" namespace="services">
+      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="" registerAsAutomationAction="false">
+        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
+        <arg name="item" type="ShoppingItem" nativetype="services.ShoppingItem" fulltype="services.ShoppingItem" javatype="services.ShoppingItem" required="true"/>
+      </method>
+      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="" registerAsAutomationAction="false">
+        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
+        <arg name="items" type="Array" nativetype="List&lt;services.ShoppingItem&gt;" fulltype="Array" javatype="java.util.List&lt;services.ShoppingItem&gt;" elementType="ShoppingItem" required="true"/>
+      </method>
+      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order" description="" operationName="" registerAsAutomationAction="false">
+        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
+      </method>
+    </service>
+    <datatype name="ShoppingItem" description="ShoppingItem" fullname="services.ShoppingItem" typeNamespace="services">
+      <field name="objectId" type="String" nativetype="String" fulltype="String" javatype="java.lang.String"/>
+      <field name="product" type="String" nativetype="String" fulltype="String" javatype="java.lang.String"/>
+      <field name="price" type="Number" nativetype="float" fulltype="Number" javatype="float"/>
+      <field name="quantity" type="Number" nativetype="float" fulltype="Number" javatype="float"/>
+    </datatype>
+    <datatype name="Order" description="Order" fullname="services.Order" typeNamespace="services">
+      <field name="items" type="Array" nativetype="List&lt;services.ShoppingItem&gt;" fulltype="Array" javatype="java.util.List&lt;services.ShoppingItem&gt;" elementType="ShoppingItem"/>
+      <field name="orderPrice" type="Number" nativetype="float" fulltype="Number" javatype="float"/>
+    </datatype>
+  </namespace>
+  <runtime generationMode="FULL">
+  </runtime>
+</namespaces>`
 )
 
 /**

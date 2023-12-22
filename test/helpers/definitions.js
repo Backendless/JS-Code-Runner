@@ -51,9 +51,9 @@ const SHOPPING_CART_SERVICE = {
       access     : 'public',
       returnType : { name: 'void' },
       tags       : {},
-      description: undefined,
+      description: 'addItems description',
       params     : [
-        { name: 'cartName', type: { name: 'String' }, optional: false },
+        { name: 'cartName', type: { name: 'String' }, description: 'cart name description', optional: false },
         { name: 'items', type: { name: 'Array', elementType: { name: 'ShoppingItem' } }, optional: false }
       ]
     },
