@@ -1,5 +1,9 @@
 ## Change Log
 
+### v7.4.2 (2024/01/10)
+- upgrade "backendless": "^7.2.2"
+- add an ability to specify for API Methods `operationName` `description` `registerAsAutomationAction`
+
 ### v7.4.1 (2023/11/02)
 - do not send logs if global logger is OFF
 
