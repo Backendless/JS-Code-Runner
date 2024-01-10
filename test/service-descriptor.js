@@ -12,15 +12,15 @@ const SHOPPING_CART_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="ShoppingCartService" description="ShoppingCartService" fullname="services.ShoppingCartService" namespace="services">
-      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void">
+      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="" registerAsAutomationAction="false">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true" description="cart name description"/>
         <arg name="item" type="ShoppingItem" nativetype="services.ShoppingItem" fulltype="services.ShoppingItem" javatype="services.ShoppingItem" required="true"/>
       </method>
-      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void">
-        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
+      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="" registerAsAutomationAction="false">
+        <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true" description="cart name description"/>
         <arg name="items" type="Array" nativetype="List&lt;services.ShoppingItem&gt;" fulltype="Array" javatype="java.util.List&lt;services.ShoppingItem&gt;" elementType="ShoppingItem" required="true"/>
       </method>
-      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order">
+      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order" description="" operationName="" registerAsAutomationAction="false">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
       </method>
     </service>
@@ -43,17 +43,17 @@ const PET_STORE_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="PetStore" description="Simple Pet Store demonstrating explicit http routes for service methods" fullname="services.PetStore" namespace="services">
-      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" method="GET" path="/">
+      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" operationName="" registerAsAutomationAction="false" method="GET" path="/">
       </method>
-      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" method="POST" path="/">
+      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" operationName="" registerAsAutomationAction="false" method="POST" path="/">
         <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to post"/>
       </method>
-      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" method="PUT" path="/">
+      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" operationName="" registerAsAutomationAction="false" method="PUT" path="/">
         <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to save"/>
       </method>
-      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" method="GET" path="/{petId}">
+      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" operationName="" registerAsAutomationAction="false" method="GET" path="/{petId}">
       </method>
-      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" method="DELETE" path="/{petId}">
+      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" operationName="" registerAsAutomationAction="false" method="DELETE" path="/{petId}">
       </method>
     </service>
     <datatype name="Pet" description="Pet" fullname="services.Pet" typeNamespace="services">

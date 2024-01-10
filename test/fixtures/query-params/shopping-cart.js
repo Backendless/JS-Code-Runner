@@ -3,7 +3,7 @@
 class Order extends Backendless.ServerCode.PersistenceItem {
   constructor(items) {
     super()
-    
+
     /**
      * @type {Array.<ShoppingItem>}
      */
@@ -42,7 +42,7 @@ class ShoppingCartService {
 
   /**
    * @public
-   * @param {String} cartName
+   * @param {String} cartName - cart name description
    * @param {ShoppingItem} item
    * @returns {void}
    */
@@ -61,14 +61,15 @@ class ShoppingCartService {
 
   /**
    * @public
-   * @param {String} cartName
+   * @description addItems description
+   * @param {String} cartName - cart name description
    * @param {Array.<ShoppingItem>} items
    * @returns {void}
    */
   addItems(cartName, items) {
     items.forEach(item => this.addItem(cartName, item))
   }
-  
+
   /**
    * @public
    * @param {String} cartName
