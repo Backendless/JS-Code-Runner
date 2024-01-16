@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.3 (2024/01/16)
+- `operationName` should always be present
+
 ### v7.4.2 (2024/01/10)
 - upgrade "backendless": "^7.2.2"
 - add an ability to specify for API Methods `operationName` `description` `registerAsAutomationAction`
