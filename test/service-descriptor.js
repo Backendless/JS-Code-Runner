@@ -8,7 +8,7 @@ const assert          = require('assert'),
 
 require('mocha')
 
-const SHOPPING_CART_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
+const SHOPPING_CART_SERVICE_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="ShoppingCartService" description="ShoppingCartService" fullname="services.ShoppingCartService" namespace="services">
@@ -39,7 +39,7 @@ const SHOPPING_CART_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
   </runtime>
 </namespaces>`
 
-const PET_STORE_SERVICE_XML = `<?xml version="1.0" encoding="ISO-8859-1"?>
+const PET_STORE_SERVICE_XML = `<?xml version="1.0" encoding="UTF-8"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="PetStore" description="Simple Pet Store demonstrating explicit http routes for service methods" fullname="services.PetStore" namespace="services">
