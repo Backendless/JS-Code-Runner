@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.4 (2024/02/16)
+- change xml encoding to UTF-8  
+
 ### v7.4.3 (2024/01/16)
 - `operationName` should always be present
 
