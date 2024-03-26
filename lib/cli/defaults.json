@@ -66,5 +66,8 @@
     "enabled": false,
     "overrides": ""
   },
-  "responseSizeLimit": 0
+  "responseSizeLimit": 0,
+  "automation": {
+    "internalAddress": "http://localhost:9095"
+  }
 }

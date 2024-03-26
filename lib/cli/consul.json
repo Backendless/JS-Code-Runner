@@ -19,5 +19,8 @@
     "overrides": "config/coderunner/rateLimit/overrides",
     "enabled": "config/coderunner/rateLimit/enabled"
   },
-  "responseSizeLimit": "config/coderunner/responseSizeLimit"
+  "responseSizeLimit": "config/coderunner/responseSizeLimit",
+  "automation": {
+    "internalAddress": "config/automation/api/internalAddress"
+  }
 }
