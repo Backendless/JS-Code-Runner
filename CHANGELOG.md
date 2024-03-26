@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.7 (2024/03/26)
+- support setting automation URL
+- 
 ### v7.4.6 (2024/03/05)
 - do not clean env for workers in PRO
 
