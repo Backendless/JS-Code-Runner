@@ -1,5 +1,11 @@
 ## Change Log
 
+### v7.4.6 (2024/03/05)
+- do not clean env for workers in PRO
+
+### v7.4.5 (2024/02/26)
+- upgrade "backendless": "^7.2.4"
+
 ### v7.4.4 (2024/02/16)
 - change xml encoding to UTF-8  
 
