@@ -40,7 +40,12 @@ const SHOPPING_CART_SERVICE = {
     addItem : {
       access     : 'public',
       returnType : { name: 'void' },
-      tags       : {},
+      tags       : {
+        argsmappings: JSON.stringify({
+          cartName: { type: 'SINGLE_LINE_TEXT' },
+          item    : { type: 'DROPDOWN', options: { values: ['Value 1', 'Value 2'] } },
+        })
+      },
       description: undefined,
       params     : [
         { name: 'cartName', type: { name: 'String' }, optional: false, description: 'cart name description' },
