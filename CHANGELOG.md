@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.9 (2024/05/16)
+- add support for setting multi cookies in response headers
+
 ### v7.4.8 (2024/04/24)
 - add support for the argsMappings tag
 
