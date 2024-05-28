@@ -1,6 +1,9 @@
 ## Change Log
 
-### v6.5.8 (2022/10/77)
+### v6.5.8.1 (2024/05/28)
+- add support for setting multi cookies in response headers
+
+### v6.5.8 (2022/10/17)
 - upgrade "backendless": "^6.5.0"
 - 
 ### v6.5.7 (2022/10/07)
