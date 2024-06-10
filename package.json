@@ -35,7 +35,7 @@
     "backendless"
   ],
   "dependencies": {
-    "backendless": "^7.3.1",
+    "backendless": "^7.3.2",
     "backendless-js-services-core": "^0.2.0",
     "commander": "^8.3.0",
     "glob": "^7.2.0",
