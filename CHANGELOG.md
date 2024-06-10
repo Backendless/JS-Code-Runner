@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.10 (2024/06/10)
+- upgrade "backendless": "^7.3.2"
+
 ### v7.4.9 (2024/05/16)
 - add support for setting multi cookies in response headers
 
