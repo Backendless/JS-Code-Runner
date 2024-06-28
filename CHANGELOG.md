@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.11 (2024/06/28)
+- upgrade "backendless": "^7.3.3"
+
 ### v7.4.10 (2024/06/10)
 - upgrade "backendless": "^7.3.2"
 
