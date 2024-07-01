@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.12 (2024/07/01)
+- improve defining API Methods Arguments 
+
 ### v7.4.11 (2024/06/28)
 - upgrade "backendless": "^7.3.3"
 
