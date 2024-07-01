@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.13 (2024/07/02)
+- keep backward compatibility for API Service arguments
+
 ### v7.4.12 (2024/07/01)
 - improve defining API Methods Arguments 
 
