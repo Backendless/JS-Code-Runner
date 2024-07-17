@@ -96,6 +96,8 @@ describe('[invoke-action] task executor', function() {
       const exit = process.exit
       let exitCalled = false
 
+      const opts = { backendless: { repoPath: '' }, automation: { internalAddress: 'http://localhost:9095' } }
+
       process.exit = function() {
         exitCalled = true
       }
@@ -104,7 +106,7 @@ describe('[invoke-action] task executor', function() {
         process.exit = exit
       }
 
-      return executor.execute(createTask('SHUTDOWN'), { backendless: { repoPath: '' } })
+      return executor.execute(createTask('SHUTDOWN'), opts)
         .then(process.exit.restore, process.exit.restore)
         .then(() => should.equal(exitCalled, true))
     })
