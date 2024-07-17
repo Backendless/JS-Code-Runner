@@ -13,17 +13,17 @@ const PET_STORE_SERVICE_XML = (`<?xml version="1.0" encoding="UTF-8"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="PetStore" description="Simple Pet Store demonstrating explicit http routes for service methods" fullname="services.PetStore" namespace="services">
-      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" operationName="getAll" registerAsAutomationAction="false" method="GET" path="/">
+      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" operationName="getAll" registerAsAutomationAction="false" argsMappings="" method="GET" path="/">
       </method>
-      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" operationName="create" registerAsAutomationAction="false" method="POST" path="/">
+      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" operationName="create" registerAsAutomationAction="false" argsMappings="" method="POST" path="/">
         <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to post"/>
       </method>
-      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" operationName="save" registerAsAutomationAction="false" method="PUT" path="/">
+      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" operationName="save" registerAsAutomationAction="false" argsMappings="" method="PUT" path="/">
         <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to save"/>
       </method>
-      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" operationName="getPet" registerAsAutomationAction="false" method="GET" path="/{petId}">
+      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" operationName="getPet" registerAsAutomationAction="false" argsMappings="" method="GET" path="/{petId}">
       </method>
-      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" operationName="deletePet" registerAsAutomationAction="false" method="DELETE" path="/{petId}">
+      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" operationName="deletePet" registerAsAutomationAction="false" argsMappings="" method="DELETE" path="/{petId}">
       </method>
     </service>
     <datatype name="Pet" description="Pet" fullname="services.Pet" typeNamespace="services">
@@ -45,15 +45,15 @@ const SHOPPING_CART_SERVICE_XML = (`<?xml version="1.0" encoding="UTF-8"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="ShoppingCartService" description="ShoppingCartService" fullname="services.ShoppingCartService" namespace="services">
-      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="addItem" registerAsAutomationAction="false">
+      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="addItem" registerAsAutomationAction="false" argsMappings="{&quot;cartName&quot;:{&quot;type&quot;:&quot;SINGLE_LINE_TEXT&quot;},&quot;item&quot;:{&quot;type&quot;:&quot;DROPDOWN&quot;,&quot;options&quot;:{&quot;values&quot;:[&quot;Value 1&quot;,&quot;Value 2&quot;]}}}">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true" description="cart name description"/>
         <arg name="item" type="ShoppingItem" nativetype="services.ShoppingItem" fulltype="services.ShoppingItem" javatype="services.ShoppingItem" required="true"/>
       </method>
-      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void" description="addItems description" operationName="addItems" registerAsAutomationAction="false">
+      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void" description="addItems description" operationName="addItems" registerAsAutomationAction="false" argsMappings="">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true" description="cart name description"/>
         <arg name="items" type="Array" nativetype="List&lt;services.ShoppingItem&gt;" fulltype="Array" javatype="java.util.List&lt;services.ShoppingItem&gt;" elementType="ShoppingItem" required="true"/>
       </method>
-      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order" description="" operationName="purchase" registerAsAutomationAction="false">
+      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order" description="" operationName="purchase" registerAsAutomationAction="false" argsMappings="">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
       </method>
     </service>
@@ -96,6 +96,8 @@ describe('[invoke-action] task executor', function() {
       const exit = process.exit
       let exitCalled = false
 
+      const opts = { backendless: { repoPath: '' }, automation: { internalAddress: 'http://localhost:9095' } }
+
       process.exit = function() {
         exitCalled = true
       }
@@ -104,7 +106,7 @@ describe('[invoke-action] task executor', function() {
         process.exit = exit
       }
 
-      return executor.execute(createTask('SHUTDOWN'), { backendless: { repoPath: '' } })
+      return executor.execute(createTask('SHUTDOWN'), opts)
         .then(process.exit.restore, process.exit.restore)
         .then(() => should.equal(exitCalled, true))
     })

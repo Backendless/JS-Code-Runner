@@ -8,7 +8,9 @@ const executor = require('../../lib/server-code/runners/tasks/executor'),
  * @returns {Promise.<Object>}
  */
 module.exports = function(task, model) {
-  return executor.execute(task, { backendless: { repoPath: '' } }, model)
+  const opts = { backendless: { repoPath: '' }, automation: { internalAddress: 'http://localhost:9095' } }
+
+  return executor.execute(task, opts, model)
     .then(res => res && json.parse(res))
     .then(res => {
       if (res && res.arguments) {
