@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.14 (2024/07/18)
+- add support for the action block color properties
+
 ### v7.4.13 (2024/07/02)
 - keep backward compatibility for API Service arguments
 
