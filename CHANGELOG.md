@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.16 (2024/08/15)
+- add a ability to specify serviceInfo for an API Service
+
 ### v7.4.15 (2024/07/25)
 - add a new attr @executionTimeoutInSeconds to specify an API method execution time
 
