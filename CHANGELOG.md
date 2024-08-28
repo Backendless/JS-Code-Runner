@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.17 (2024/08/28)
+- rework URL encoding
+
 ### v7.4.16 (2024/08/15)
 - add a ability to specify serviceInfo for an API Service
 
