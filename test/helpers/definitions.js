@@ -7,7 +7,8 @@ const ORDER = {
   properties : {
     items     : { type: { name: 'Array', elementType: { name: 'ShoppingItem' } } },
     orderPrice: { type: { name: 'Number' } }
-  }
+  },
+  serviceInfo: {}
 }
 
 const SHOPPING_CART = {
@@ -29,7 +30,8 @@ const SHOPPING_CART = {
       returnType : undefined,
       description: undefined
     }
-  }
+  },
+  serviceInfo: {}
 }
 
 const SHOPPING_CART_SERVICE = {
@@ -80,7 +82,8 @@ const SHOPPING_CART_SERVICE = {
       ],
       returnType : { name: 'Promise', elementType: { name: 'Order' } }
     }
-  }
+  },
+  serviceInfo: {}
 }
 
 const SHOPPING_ITEM = {
@@ -92,7 +95,8 @@ const SHOPPING_ITEM = {
     price   : { type: { name: 'Number' } },
     product : { type: { name: 'String' } },
     quantity: { type: { name: 'Number' } }
-  }
+  },
+  serviceInfo: {}
 }
 
 const PET = {
@@ -104,7 +108,8 @@ const PET = {
     name    : { type: { name: 'String' } },
     birthday: { type: { name: 'Number' } },
     parent  : { type: { name: 'Pet' } }
-  }
+  },
+  serviceInfo: {}
 }
 
 const PET_DELETE_RESPONSE = {
@@ -174,7 +179,8 @@ const PET_STORE = {
         route: 'DELETE /{petId}'
       }
     }
-  }
+  },
+  serviceInfo: {}
 }
 
 exports.ORDER = ORDER
