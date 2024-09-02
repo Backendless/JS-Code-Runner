@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.19 (2024/09/02)
+- revert changes introduced by v7.4.17 (URL encoding)
+
 ### v7.4.18 (2024/08/30)
 - add a new attr @systemNonBillableRequest to specify an API method that shouldn't be counted in the billing
 
