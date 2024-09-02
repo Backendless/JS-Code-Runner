@@ -1,6 +1,6 @@
 ## Change Log
 
-### v7.4.19 (2024/09/02)
+### v7.4.20 (2024/09/02)
 - revert changes introduced by v7.4.17 (URL encoding)
 
 ### v7.4.18 (2024/08/30)
