@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.22 (2024/09/12)
+- rework URL encoding
+
 ### v7.4.21 (2024/09/10)
 - fix ordering for API Service configuration items 
 
