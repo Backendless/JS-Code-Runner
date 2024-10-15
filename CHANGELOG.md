@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.23 (2024/10/16)
+- fix parsing Date/Checkbox config items
+
 ### v7.4.22 (2024/09/12)
 - rework URL encoding
 

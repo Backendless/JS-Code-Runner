@@ -1,6 +1,6 @@
 {
   "name": "backendless-coderunner",
-  "version": "7.4.22",
+  "version": "7.4.23",
   "description": "Backendless CodeRunner for Node.js",
   "scripts": {
     "test": "mocha",
