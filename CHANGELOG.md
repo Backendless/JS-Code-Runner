@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.24 (2024/10/22)
+- fix parsing JSDoc for API Methods
+
 ### v7.4.23 (2024/10/16)
 - fix parsing Date/Checkbox config items
 
