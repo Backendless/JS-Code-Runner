@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.4.27 (2024/10/23)
+- add a new JSDoc tag `metaInfo` to collect additional data about an API Method 
+
 ### v7.4.26 (2024/10/23)
 - fix parsing JSDoc for API Methods
 
