@@ -43,7 +43,6 @@ class ShoppingCartService {
   /**
    * @public
    * @param {String} cartName - cart name description
-   * @argsMappings {"cartName":{"type":"SINGLE_LINE_TEXT"},"item":{"type":"DROPDOWN","options":{"values":["Value 1","Value 2"]}}}
    * @param {ShoppingItem} item
    * @returns {void}
    */
