@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.5.0 (2024/11/29)
+- change serialization method params in the JSDoc, the tag `paramDef` can contain UI representation options 
+
 ### v7.4.27 (2024/10/23)
 - add a new JSDoc tag `metaInfo` to collect additional data about an API Method 
 
