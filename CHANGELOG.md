@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.5.1 (2024/12/16)
+- add possibility to provide a default value to method arguments that will be used by a FlowRunner
+
 ### v7.5.0 (2024/11/29)
 - change serialization method params in the JSDoc, the tag `paramDef` can contain UI representation options 
 
