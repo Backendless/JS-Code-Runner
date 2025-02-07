@@ -1,5 +1,11 @@
 ## Change Log
 
+### v7.6.0 (2025/02/07)
+- require NodeJS version >= 18
+- fix resolving JSDoc module path
+- upgrade JS-SDK to v7.4.0
+- upgrade JS-Core to v0.8.10
+
 ### v7.5.1 (2024/12/16)
 - add possibility to provide a default value to method arguments that will be used by a FlowRunner
 
