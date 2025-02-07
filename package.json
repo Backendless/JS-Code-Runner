@@ -29,7 +29,7 @@
     "email": "info@backendless.com"
   },
   "engines": {
-    "node": ">=7.6"
+    "node": ">=18"
   },
   "keywords": [
     "backendless"
