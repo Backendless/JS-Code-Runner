@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.1 (2025/02/12)
+- upgrade "backendless-request": "^0.8.1"
+
 ### v7.6.0 (2025/02/07)
 - require NodeJS version >= 18
 - fix resolving JSDoc module path
