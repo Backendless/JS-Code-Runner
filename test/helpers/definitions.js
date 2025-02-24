@@ -52,13 +52,14 @@ const SHOPPING_CART_SERVICE = {
       description: undefined,
       params     : [
         {
-          name       : 'cartName',
-          label      : 'cartName',
-          type       : { name: 'String' },
-          optional   : false,
-          description: 'cart name description'
+          name        : 'cartName',
+          label       : 'cartName',
+          type        : { name: 'String' },
+          optional    : false,
+          description : 'cart name description',
+          defaultValue: undefined,
         },
-        { name: 'item', label: 'item', type: { name: 'ShoppingItem' }, optional: false }
+        { name: 'item', label: 'item', type: { name: 'ShoppingItem' }, optional: false, defaultValue: undefined, }
       ],
       metaInfo   : {
         args: {}
@@ -71,17 +72,19 @@ const SHOPPING_CART_SERVICE = {
       description: 'addItems description',
       params     : [
         {
-          name       : 'cartName',
-          label      : 'cartName',
-          type       : { name: 'String' },
-          description: 'cart name description',
-          optional   : false
+          name        : 'cartName',
+          label       : 'cartName',
+          type        : { name: 'String' },
+          description : 'cart name description',
+          optional    : false,
+          defaultValue: undefined,
         },
         {
-          name    : 'items',
-          label   : 'items',
-          type    : { name: 'Array', elementType: { name: 'ShoppingItem' } },
-          optional: false
+          name        : 'items',
+          label       : 'items',
+          type        : { name: 'Array', elementType: { name: 'ShoppingItem' } },
+          optional    : false,
+          defaultValue: undefined,
         }
       ],
       metaInfo   : {
@@ -94,7 +97,7 @@ const SHOPPING_CART_SERVICE = {
       tags       : {},
       description: undefined,
       params     : [
-        { name: 'cartName', label: 'cartName', type: { name: 'String' }, optional: false }
+        { name: 'cartName', label: 'cartName', type: { name: 'String' }, optional: false, defaultValue: undefined, }
       ],
       metaInfo   : {
         args: {}
@@ -105,7 +108,7 @@ const SHOPPING_CART_SERVICE = {
       tags       : {},
       description: undefined,
       params     : [
-        { name: 'cartName', label: 'cartName', type: { name: 'String' }, optional: false }
+        { name: 'cartName', label: 'cartName', type: { name: 'String' }, optional: false, defaultValue: undefined, }
       ],
       returnType : { name: 'Promise', elementType: { name: 'Order' } },
       metaInfo   : {
@@ -175,11 +178,12 @@ const PET_STORE = {
       returnType : { name: 'Promise', elementType: { name: 'Pet' } },
       params     : [
         {
-          name       : 'pet',
-          label      : 'pet',
-          type       : { name: 'Pet' },
-          optional   : false,
-          description: 'The pet JSON you want to post'
+          name        : 'pet',
+          label       : 'pet',
+          type        : { name: 'Pet' },
+          optional    : false,
+          description : 'The pet JSON you want to post',
+          defaultValue: undefined,
         }
       ],
       tags       : {
@@ -196,11 +200,12 @@ const PET_STORE = {
       returnType : { name: 'Promise', elementType: { name: 'Pet' } },
       params     : [
         {
-          name       : 'pet',
-          label      : 'pet',
-          type       : { name: 'Pet' },
-          optional   : false,
-          description: 'The pet JSON you want to save'
+          name        : 'pet',
+          label       : 'pet',
+          type        : { name: 'Pet' },
+          optional    : false,
+          description : 'The pet JSON you want to save',
+          defaultValue: undefined,
         }
       ],
       tags       : {
