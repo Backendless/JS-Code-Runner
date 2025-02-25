@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.3 (2025/02/23)
+- fix issue with trailing slash in the HTTP Client
+
 ### v7.6.2 (2025/02/23)
 - upgrade "backendless-request": "^0.8.3"
 
