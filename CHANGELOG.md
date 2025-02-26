@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.4 (2025/02/26)
+- cleanup redundant logs 
+
 ### v7.6.3 (2025/02/25)
 - fix issue with trailing slash in the HTTP Client
 
