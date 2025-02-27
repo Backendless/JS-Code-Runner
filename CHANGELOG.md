@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.5 (2025/02/27)
+- BL-117 fix issues with uncaught exception in workers
+- 
 ### v7.6.4 (2025/02/26)
 - cleanup redundant logs 
 
