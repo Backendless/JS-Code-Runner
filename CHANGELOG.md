@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.6 (2025/03/05)
+- FR-1350 add JS-SDK reference to the invocation context
+
 ### v7.6.5 (2025/02/27)
 - BL-117 fix issues with uncaught exception in workers
 - 
