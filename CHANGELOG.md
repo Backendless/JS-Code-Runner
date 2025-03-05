@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.8 (2025/03/05)
+- FR-1409 Cannot create new codeless service
+
 ### v7.6.7 (2025/03/05)
 - FR-1307 Add support for data entry fields for dynamic schemas
 
