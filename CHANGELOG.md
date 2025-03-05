@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.7 (2025/03/05)
+- FR-1307 Add support for data entry fields for dynamic schemas
+
 ### v7.6.6 (2025/03/05)
 - FR-1350 add JS-SDK reference to the invocation context
 
