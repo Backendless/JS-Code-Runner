@@ -1,5 +1,11 @@
 ## Change Log
 
+### v7.6.10 (2025/03/19)
+- upgrade JS-SDK to v7.4.4
+
+### v7.6.9 (2025/03/11)
+- FR-1437 Dynamic Sample Result support
+
 ### v7.6.8 (2025/03/05)
 - FR-1409 Cannot create new codeless service
 
