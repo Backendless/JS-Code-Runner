@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.11 (2025/03/24)
+- FR-1438 Support for object rendering in FlowRunner action inputs
+
 ### v7.6.10 (2025/03/19)
 - upgrade JS-SDK to v7.4.4
 
