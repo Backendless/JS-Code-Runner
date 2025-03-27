@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.12 (2025/03/27)
+- always print the deployment zip file size
+
 ### v7.6.11 (2025/03/24)
 - FR-1438 Support for object rendering in FlowRunner action inputs
 
