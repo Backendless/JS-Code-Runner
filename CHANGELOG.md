@@ -1,5 +1,38 @@
 ## Change Log
 
+### v7.6.12 (2025/03/27)
+- always print the deployment zip file size
+
+### v7.6.11 (2025/03/24)
+- FR-1438 Support for object rendering in FlowRunner action inputs
+
+### v7.6.10 (2025/03/19)
+- upgrade JS-SDK to v7.4.4
+
+### v7.6.9 (2025/03/11)
+- FR-1437 Dynamic Sample Result support
+
+### v7.6.8 (2025/03/05)
+- FR-1409 Cannot create new codeless service
+
+### v7.6.7 (2025/03/05)
+- FR-1307 Add support for data entry fields for dynamic schemas
+
+### v7.6.6 (2025/03/05)
+- FR-1350 add JS-SDK reference to the invocation context
+
+### v7.6.5 (2025/02/27)
+- BL-117 fix issues with uncaught exception in workers
+- 
+### v7.6.4 (2025/02/26)
+- cleanup redundant logs 
+
+### v7.6.3 (2025/02/25)
+- fix issue with trailing slash in the HTTP Client
+
+### v7.6.2 (2025/02/23)
+- upgrade "backendless-request": "^0.8.2"
+
 ### v7.6.1 (2025/02/12)
 - upgrade "backendless-request": "^0.8.1"
 
