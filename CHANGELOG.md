@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.13 (2025/04/16)
+- FR-841 @v-excelsior Allow hiding block arguments in the Flowrunner
+
 ### v7.6.12 (2025/03/27)
 - always print the deployment zip file size
 
