@@ -13,17 +13,17 @@ const PET_STORE_SERVICE_XML = (`<?xml version="1.0" encoding="UTF-8"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="PetStore" description="Simple Pet Store demonstrating explicit http routes for service methods" fullname="services.PetStore" namespace="services">
-      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" operationName="getAll" registerAs="" method="GET" path="/">
+      <method name="getAll" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="List all pets" operationName="getAll" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}" method="GET" path="/">
       </method>
-      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" operationName="create" registerAs="" method="POST" path="/">
+      <method name="create" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Make a new pet" operationName="create" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}" method="POST" path="/">
         <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to post"/>
       </method>
-      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" operationName="save" registerAs="" method="PUT" path="/">
+      <method name="save" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Save pet" operationName="save" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}" method="PUT" path="/">
         <arg name="pet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" required="true" description="The pet JSON you want to save"/>
       </method>
-      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" operationName="getPet" registerAs="" method="GET" path="/{petId}">
+      <method name="getPet" type="Pet" nativetype="services.Pet" fulltype="services.Pet" javatype="services.Pet" description="Sends the pet with pet Id" operationName="getPet" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}" method="GET" path="/{petId}">
       </method>
-      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" operationName="deletePet" registerAs="" method="DELETE" path="/{petId}">
+      <method name="deletePet" type="PetDeleteResponse" nativetype="services.PetDeleteResponse" fulltype="services.PetDeleteResponse" javatype="services.PetDeleteResponse" description="Delete the pet by pet Id" operationName="deletePet" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}" method="DELETE" path="/{petId}">
       </method>
     </service>
     <datatype name="Pet" description="Pet" fullname="services.Pet" typeNamespace="services">
@@ -45,15 +45,15 @@ const SHOPPING_CART_SERVICE_XML = (`<?xml version="1.0" encoding="UTF-8"?>
 <namespaces>
   <namespace name="services" fullname="services">
     <service name="ShoppingCartService" description="ShoppingCartService" fullname="services.ShoppingCartService" namespace="services">
-      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="addItem" registerAs="">
+      <method name="addItem" type="void" nativetype="void" fulltype="void" javatype="void" description="" operationName="addItem" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true" description="cart name description"/>
         <arg name="item" type="ShoppingItem" nativetype="services.ShoppingItem" fulltype="services.ShoppingItem" javatype="services.ShoppingItem" required="true"/>
       </method>
-      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void" description="addItems description" operationName="addItems" registerAs="">
+      <method name="addItems" type="void" nativetype="void" fulltype="void" javatype="void" description="addItems description" operationName="addItems" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true" description="cart name description"/>
         <arg name="items" type="Array" nativetype="List&lt;services.ShoppingItem&gt;" fulltype="Array" javatype="java.util.List&lt;services.ShoppingItem&gt;" elementType="ShoppingItem" required="true"/>
       </method>
-      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order" description="" operationName="purchase" registerAs="">
+      <method name="purchase" type="Order" nativetype="services.Order" fulltype="services.Order" javatype="services.Order" description="" operationName="purchase" registerAs="" appearanceIcon="" appearanceColor="" metaInfo="{&quot;args&quot;:{},&quot;sampleResult&quot;:null,&quot;sampleResultLoader&quot;:null}">
         <arg name="cartName" type="String" nativetype="String" fulltype="String" javatype="java.lang.String" required="true"/>
       </method>
     </service>
