@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.14 (2025/06/27)
+- FR-1328 Support for action grouping (for extensions)
+
 ### v7.6.13 (2025/04/16)
 - FR-841 @v-excelsior Allow hiding block arguments in the Flowrunner
 
