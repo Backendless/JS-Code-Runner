@@ -13,6 +13,7 @@
       "codeInspectionTimeout": 60
     }
   },
+  "enableAnalyticsHeader": true,
   "redis": {
     "bl/production": {},
     "analytics": {}
