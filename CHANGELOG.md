@@ -1,5 +1,8 @@
 ## Change Log
 
+### v7.6.15 (2026/01/14)
+- upgrade JS-SDK to v7.4.9
+
 ### v7.6.14 (2025/06/27)
 - FR-1328 Support for action grouping (for extensions)
 
