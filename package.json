@@ -35,8 +35,8 @@
     "backendless"
   ],
   "dependencies": {
-    "backendless": "^7.4.9",
-    "backendless-js-services-core": "^0.8.10",
+    "backendless": "^8.0.0",
+    "backendless-js-services-core": "^0.8.15",
     "commander": "^8.3.0",
     "glob": "^7.2.0",
     "jsdoc": "^3.6.10",
@@ -44,6 +44,9 @@
     "xml": "^1.0.1"
   },
   "license": "MIT",
+  "overrides": {
+    "lodash": ">=4.17.23"
+  },
   "devDependencies": {
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
