@@ -1,5 +1,8 @@
 ## Change Log
 
+### v8.0.0 (2026/02/27)
+- upgrade JS-SDK to v8.0.0
+- 
 ### v7.6.15 (2026/01/14)
 - upgrade JS-SDK to v7.4.9
 
