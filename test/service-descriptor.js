@@ -1,4 +1,4 @@
-/*eslint max-len: ["off"]*/
+/* eslint-disable @stylistic/max-len */
 
 'use strict'
 
