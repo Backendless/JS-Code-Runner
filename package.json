@@ -39,19 +39,25 @@
     "backendless-js-services-core": "^0.8.15",
     "commander": "^8.3.0",
     "glob": "^7.2.0",
-    "jsdoc": "^3.6.10",
+    "jsdoc": "^4.0.5",
     "jszip": "^3.10.1",
     "xml": "^1.0.1"
   },
   "license": "MIT",
   "overrides": {
-    "lodash": ">=4.17.23"
+    "lodash": ">=4.17.23",
+    "nodemailer": ">=7.0.11",
+    "underscore": ">=1.13.8",
+    "diff": ">=8.0.3",
+    "serialize-javascript": ">=7.0.3",
+    "js-yaml": ">=4.1.1",
+    "minimatch": ">=3.1.4"
   },
   "devDependencies": {
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^7.32.0",
-    "mocha": "^9.2.1",
+    "eslint": "^9.39.3",
+    "mocha": "^11.7.5",
     "should": "^13.2.3",
     "supertest": "^6.2.2"
   }
