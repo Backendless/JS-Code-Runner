@@ -1,5 +1,8 @@
 ## Change Log
 
+### v8.0.1 (2026/03/05)
+- fix vulnerabilities issues
+
 ### v8.0.0 (2026/02/27)
 - upgrade JS-SDK to v8.0.0
 - 
