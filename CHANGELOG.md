@@ -1,5 +1,8 @@
 ## Change Log
 
+### v8.0.3 (2026/03/10)
+- upgade node modules to fix vulnerabilities with the minimatch module
+
 ### v8.0.2 (2026/03/05)
 - fix vulnerabilities issues
 
