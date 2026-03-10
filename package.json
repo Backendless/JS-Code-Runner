@@ -38,32 +38,26 @@
     "backendless": "^8.0.0",
     "backendless-js-services-core": "^1.0.0",
     "commander": "^8.3.0",
-    "glob": "^7.2.0",
-    "jsdoc": "^4.0.5",
+    "glob": "^13.0.6",
     "ioredis": "^5.3.1",
+    "jsdoc": "^4.0.5",
     "jszip": "^3.10.1",
-    "xml": "^1.0.1",
+    "minimatch": ">=10.2.4",
     "winston": "^3.7.2",
     "winston-daily-rotate-file": "^4.6.1",
     "winston-logstash": "^0.4.0",
-    "winston-papertrail": "^1.0.5"
+    "winston-papertrail": "^1.0.5",
+    "xml": "^1.0.1"
   },
   "license": "MIT",
-  "overrides": {
-    "lodash": ">=4.17.23",
-    "nodemailer": ">=7.0.11",
-    "underscore": ">=1.13.8",
-    "diff": ">=8.0.3",
-    "serialize-javascript": ">=7.0.3",
-    "js-yaml": ">=4.1.1",
-    "minimatch": ">=4.2.5"
-  },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.9.0",
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^9.39.3",
-    "mocha": "^11.7.5",
+    "eslint": "^10.0.3",
+    "globals": "^17.4.0",
+    "mocha": "12.0.0-beta-9",
     "should": "^13.2.3",
     "supertest": "^6.2.2"
   }

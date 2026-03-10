@@ -32,6 +32,8 @@ module.exports = [
       'no-unused-expressions': ['error', { allowShortCircuit: true }],
       '@stylistic/object-curly-spacing': ['error', 'always'],
       'no-unused-vars': ['error', { caughtErrors: 'none' }],
+      'no-useless-assignment': 0,
+      'preserve-caught-error': 0,
     }
   },
   {
