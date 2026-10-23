@@ -140,6 +140,20 @@ describe('[invoke-service] task executor', function() {
         .then(res => assert.deepEqual(res.arguments, { name: 'John Dou' }))
     })
 
+    it('void', function() {
+      class Foo {
+        bar() {
+        }
+      }
+
+      return invoke(createTask('Foo', 'bar'), new TestModel().addService(Foo))
+        .then(res => {
+          assert.ok(res, 'void service method must still return a result')
+          assert.equal(res.exception, null)
+          assert.strictEqual(res.arguments, null)
+        })
+    })
+
   })
 
   describe('should handle error', function() {
