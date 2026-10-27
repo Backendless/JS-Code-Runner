@@ -380,6 +380,17 @@ describe('[invoke-handler] task executor', function() {
 
       return invoke(task, modelStub(handler)).should.be.fulfilledWith(undefined)
     })
+
+    it('should return error raised in the handler', function() {
+      function handler() {
+        throw new Error('Async Handler Error')
+      }
+
+      return invoke(task, modelStub(handler)).then(res => {
+        should.exist(res.exception)
+        res.exception.exceptionMessage.should.equal('Async Handler Error')
+      })
+    })
   })
 
   describe('for custom events', function() {
