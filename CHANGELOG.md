@@ -1,5 +1,8 @@
 ## Change Log
 
+### v8.1.0 (2026/02/11)
+- fix BACK-205 JS CodeRunner silently loses errors raised after a handler returns, and reports nothing when a worker is killed for a task timeout
+
 ### v8.0.3 (2026/03/10)
 - upgade node modules to fix vulnerabilities with the minimatch module
 
