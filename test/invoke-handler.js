@@ -7,6 +7,7 @@ const should          = require('should'),
       executor        = require('../lib/server-code/runners/tasks/executor'),
       executionResult = require('../lib/server-code/runners/tasks/util/result-wrapper').executionResult,
       argsUtil        = require('../lib/server-code/runners/tasks/util/args'),
+      catchUncaught   = require('./helpers/uncaught-exception'),
       Backendless     = require('backendless'),
       PERSISTENCE     = events.providers.PERSISTENCE,
       BEFORE_CREATE   = PERSISTENCE.events.beforeCreate,
@@ -466,6 +467,26 @@ describe('[invoke-handler] task executor', function() {
       return invoke(createTask(CUSTOM_EVENT, []), modelStub(handler)).then(res => {
         should.equal(res.exception.exceptionMessage, 'Error')
       })
+    })
+  })
+
+  describe('late errors', function() {
+    it('should pass an error raised after the handler completed to the process', async function() {
+      const lateError = catchUncaught()
+
+      function handler() {
+        setTimeout(() => {
+          throw new Error('late error')
+        }, 10)
+      }
+
+      const res = await invoke(createTask(BEFORE_CREATE, [], true), modelStub(handler))
+
+      should.not.exist(res)
+
+      const error = await lateError
+
+      error.message.should.equal('late error')
     })
   })
 })

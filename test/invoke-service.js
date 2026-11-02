@@ -5,7 +5,8 @@ const assert     = require('assert'),
       invoke     = require('./helpers/invoke-task'),
       ServerCode = require('../lib/server-code/api'),
       executor   = require('../lib/server-code/runners/tasks/executor'),
-      argsUtil   = require('../lib/server-code/runners/tasks/util/args')
+      argsUtil   = require('../lib/server-code/runners/tasks/util/args'),
+      catchUncaught = require('./helpers/uncaught-exception')
 
 const SUCCESS = 'success'
 
@@ -207,6 +208,28 @@ describe('[invoke-service] task executor', function() {
       return invoke(createTask('Test', 'test'), new TestModel().addService(Test))
         .then(res => assert.equal(res.exception.exceptionMessage, 'async-erred'))
     })
+  })
+
+  it('should pass an error raised after the service method completed to the process', async function() {
+    const lateError = catchUncaught()
+
+    class Foo {
+      bar() {
+        setTimeout(() => {
+          throw new Error('late error')
+        }, 10)
+
+        return SUCCESS
+      }
+    }
+
+    const res = await invoke(createTask(Foo.name, 'bar'), new TestModel().addService(Foo))
+
+    assert.equal(res.exception, undefined)
+
+    const error = await lateError
+
+    assert.equal(error.message, 'late error')
   })
 
   it('should handle custom error', function() {
